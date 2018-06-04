@@ -41,6 +41,7 @@
     }
 
     function buildFoundations() {
+      console.log('hello');
       return _.range(1, 5)
         .map(function () {
           return new FoundationPile([], scoring);

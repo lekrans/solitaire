@@ -1,5 +1,4 @@
-angular.module("klondike.scoring", [])
-  .service("scoring", [function Scoring() {
+function Scoring() {
     "use strict";
 
     this.score = 0;
@@ -30,4 +29,29 @@ angular.module("klondike.scoring", [])
         }
       }
     }
-  }]);
+}
+
+console.log('before test of variables');
+console.log(ENV_IS);
+if (ENV_IS_DEVELOPMENT) {
+  console.log('IN DEVELOPMENT');
+}
+
+if (module.hot) {
+  module.hot.accept(console.log.bind(console));
+
+  const doc = angular.element(document);
+  const injector = doc.injector();
+  if (injector) {
+    const actualService = injector.get("scoring");
+    const newScoringService = new Scoring();
+
+    Object.keys(actualService)
+      .filter(key => typeof actualService[key] === "function")
+      .forEach(key => actualService[key] = newScoringService[key]);
+    doc.find('html').score().$apply();
+    console.info('[scoring] Hot Swapped!');
+  }
+}
+angular.module("klondike.scoring", [])
+  .service("scoring", [Scoring]);
