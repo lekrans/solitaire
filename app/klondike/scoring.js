@@ -4,6 +4,7 @@ function Scoring() {
     this.score = 0;
 
     this.newGame = function () {
+      setTimeout(() => { throw "Oh really you did what..."}, 100);
       this.score = 0;
     };
     this.tableauCardTurnedUp = function () {

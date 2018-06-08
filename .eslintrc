@@ -8,5 +8,7 @@
       2,
       "nofunc"
     ]
-  }
+  },
+  "parserOptions": { "ecmaVersion": 6 },
+  "root": true
 }

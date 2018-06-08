@@ -235,9 +235,62 @@ angular.module("klondike", ["klondike.game", "klondike.board", "klondike.scoring
 /***/ }),
 
 /***/ "./app/klondike/scoring.js":
-/***/ (function(module, exports) {
+/***/ (function(module, exports, __webpack_require__) {
 
-throw new Error("Module build failed: SyntaxError: /Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/app/klondike/scoring.js: Unexpected token (8:4)\n\n   6 |     this.newGame = function () {\n   7 |       this.score =\n>  8 |     };\n     |     ^\n   9 |     this.tableauCardTurnedUp = function () {\n  10 |       this.score += 5;\n  11 |     };\n    at Parser.raise (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:3861:15)\n    at Parser.unexpected (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5190:16)\n    at Parser.parseExprAtom (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:6268:20)\n    at Parser.parseExprSubscripts (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5868:21)\n    at Parser.parseMaybeUnary (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5847:21)\n    at Parser.parseExprOps (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5754:21)\n    at Parser.parseMaybeConditional (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5726:21)\n    at Parser.parseMaybeAssign (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5673:21)\n    at Parser.parseMaybeAssign (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5713:27)\n    at Parser.parseExpression (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5626:21)\n    at Parser.parseStatementContent (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:7199:21)\n    at Parser.parseStatement (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:7085:17)\n    at Parser.parseBlockOrModuleBlockBody (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:7632:23)\n    at Parser.parseBlockBody (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:7619:10)\n    at Parser.parseBlock (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:7608:10)\n    at Parser.parseFunctionBody (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:6865:24)\n    at Parser.parseFunctionBodyAndFinish (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:6845:10)\n    at Parser.parseFunction (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:7757:10)\n    at Parser.parseFunctionExpression (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:6303:17)\n    at Parser.parseExprAtom (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:6237:21)\n    at Parser.parseExprSubscripts (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5868:21)\n    at Parser.parseMaybeUnary (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5847:21)\n    at Parser.parseExprOps (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5754:21)\n    at Parser.parseMaybeConditional (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5726:21)\n    at Parser.parseMaybeAssign (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5673:21)\n    at Parser.parseMaybeAssign (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5713:27)\n    at Parser.parseExpression (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:5626:21)\n    at Parser.parseStatementContent (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:7199:21)\n    at Parser.parseStatement (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:7085:17)\n    at Parser.parseBlockOrModuleBlockBody (/Users/michaellekrans/Documents/programming/WebPack/webpack3/optimizing-web-apps-webpack/node_modules/@babel/parser/lib/index.js:7632:23)");
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var bulle = function bulle(kaka) {
+  _classCallCheck(this, bulle);
+
+  this.senap = kaka;
+};
+
+function Scoring() {
+  "use strict";
+
+  this.score = 0;
+
+  this.newGame = function () {
+    this.score = 0;
+  };
+
+  this.tableauCardTurnedUp = function () {
+    this.score += 5;
+  };
+
+  this.dropped = function (source, destionation) {
+    this.score += scoreForMoving(source, destionation) || 0;
+  };
+
+  this.wasteRecycled = function () {
+    this.score = Math.max(this.score - 100, 0);
+  };
+
+  function scoreForMoving(source, destionation) {
+    if (destionation.name === "TableauPile") {
+      if (source.name === "FoundationPile") {
+        return -15;
+      }
+
+      return 5;
+    }
+
+    if (destionation.name === "FoundationPile") {
+      if (source.name === "TableauPile" || source.name === "WastePile") {
+        return 10;
+      }
+    }
+  }
+}
+
+console.log('before test of variables');
+console.log("production");
+
+if (false) {}
+
+if (false) { var newScoringService, actualService, injector, doc; }
+
+angular.module("klondike.scoring", []).service("scoring", [Scoring]);
 
 /***/ })
 

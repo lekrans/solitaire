@@ -2,7 +2,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
-
+const babelloader = require('./babelloader');
 
 
 
@@ -13,32 +13,11 @@ module.exports = function (env, vargs) {
   const baseConfig = {
     mode: 'none',
     entry: './app/app.js',
+    devtool: 'source-maps',
     output: {
       path: path.resolve(__dirname, 'app/dist/'),
       filename: 'app.bundle.js',
       publicPath: '/dist/',
-    },
-    module: {
-      rules: [
-        {
-          test: /\.js$/,
-          exclude: /(node_modules|bower_components)/,
-          use: {
-            loader: 'babel-loader',
-            options: {
-              presets: [
-                ['@babel/preset-env', {
-                  debug: true,
-                  modules: false,
-                  targets: {
-                    browsers: ['> 1%', 'not IE < 12'],
-                  }
-                }]
-              ],
-            }
-          }
-        }
-      ]
     },
     plugins: [
       new webpack.NamedModulesPlugin(),
@@ -60,7 +39,9 @@ module.exports = function (env, vargs) {
       plugins: [
         new webpack.HotModuleReplacementPlugin(),
       ]
-    })
+    });
   }
-  return baseConfig;
+  else {
+    return merge(baseConfig, babelloader);
   }
+}
